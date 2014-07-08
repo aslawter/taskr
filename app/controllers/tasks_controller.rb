@@ -2,7 +2,7 @@ class TasksController < ApplicationController
   before_action :require_login
   def index
     @task = Task.new
-    @tasks = current_user.tasks
+    @tasks = current_user.tasks.not_completed
   end
 
   def create

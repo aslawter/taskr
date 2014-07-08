@@ -1,4 +1,5 @@
 <li>
-<p><%= task.title %></p>
-<p>&mdash; <%= task.body %></p>
+  <p><%= task.title %></p>
+  <p>&mdash; <%= task.body %></p>
+  <%= button_to "Mark as complete", [task, :task_completion] %>
 </li>
