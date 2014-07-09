@@ -5,7 +5,7 @@
 <p><%= task.title %></p>
 <p>&mdash; <%= task.body %></p>
 <div class="kill">
-  <%= link_to "Delete this task", "#", class: "delete_task" %>
+  <%= link_to "Delete", "#", class: "delete_task" %>
   <span class="delete_options" >
     <%=link_to "Cancel", "#", class: "cancel_task" %>
     <%=link_to "Destroy", task, class: "destroy_task", method: :delete%>
