@@ -15,12 +15,12 @@ $(function(){
   return false;
   });
   
-  $(".completed_checkbox").click(function(event){
+  $("body").on("click", ".completed_checkbox", function(event){
     var formEl = $(event.target).parents("form");
     $.ajax({
       url: formEl.prop("action"),
       data: formEl.serialize(),
-      type: "PATCH"
+      type:"PATCH"
     }).done(function(){
       formEl.parents("li").fadeOut();
    });
