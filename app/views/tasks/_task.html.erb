@@ -1,5 +1,7 @@
 <li>
+<%= form_for task do |form| %>
+  <%= form.check_box :completed, class: "completed_checkbox" %>
+<% end %>
   <p><%= task.title %></p>
   <p>&mdash; <%= task.body %></p>
-  <%= button_to "Mark as complete", [task, :task_completion] %>
 </li>
